@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh Vegetables</title>
+  <style>
+    /* Global styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  
+  body {
+  font-family: 'Roboto', sans-serif;
+  }
+  
+  a {
+  text-decoration: none;
+  }
+  
+  ul {
+  list-style: none;
+  }
+  
+  /* Header styles */
+  
+  header {
+  background-color: rgb(70, 77, 39);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  }
+  
+  nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+  
+  .logo img {
+  height: 2rem;
+  }
+  
+  nav ul {
+  display: flex;
+  }
+  
+  nav li {
+  margin-left: 1.5rem;
+  }
+  
+  nav li:first-child {
+  margin-left: 0;
+  }
+  
+  nav a {
+  color: #333333;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+  }
+  
+  nav a:hover {
+  background-color: #f0f0f0;
+  }
+  
+  /* Hero styles */
+  
+  .hero {
+  background-image: url('https://res.cloudinary.com/dqqdwbrhs/image/upload/v1676595841/products/pexels-photo-952353_pselzf.jpg');
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+  padding: 5rem 1rem;
+  text-align: center;
+  }
+  
+  .hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  }
+  
+  .hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  }
+  
+  .hero .btn {
+  background-color: #2ecc71;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+  }
+  
+  .hero .btn:hover {
+  background-color: #27ae60;
+  }
+  
+  /* About section styles */
+  
+  .about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 1rem;
+  }
+  
+  .about h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  }
+  
+  .about-img {
+  background-image: url('https://res.cloudinary.com/dqqdwbrhs/image/upload/v1676596009/products/b2_oinwkg.jpg');
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  height: 20rem;
+  width: 20rem;
+  margin-bottom: 2rem;
+  }
+  
+  .about-text p {
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  text-align: center;
+  }
+  
+  .about-text .btn {
+  background-color: #2ecc71;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 2rem auto 0;
+  }
+  
+  .about-text .btn:hover {
+  background-color: #27ae60;
+  }
+  
+  /* Products section styles */
+  
+  .products {
+  padding: 5rem 1rem;
+  text-align: center;
+  }
+  
+  .products h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  }
+  
+  .products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1))}
+  
+  .product-item {
+  background-color: #f8f8f8;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgba(215, 223, 221, 0.1);
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  }
+  
+  .product-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  }
+  
+  .product-item p {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  }
+  
+  .product-img {
+  height: 10rem;
+  margin-bottom: 1rem;
+  width: 110rem;
+  background-position: center;
+  background-size: cover;
+  }
+  
+  .product-img.tomatoes {
+  background-image: url('https://res.cloudinary.com/dqqdwbrhs/image/upload/v1676596236/products/to1_w2dfie.jpg');
+  }
+  
+  .product-img.carrots {
+  background-image: url('https://res.cloudinary.com/dqqdwbrhs/image/upload/v1676596523/products/pexels-mali-maeder-65174_xvgsfb.jpg');
+  }
+  
+  .product-img.cucumbers {
+  background-image: url('https://res.cloudinary.com/dqqdwbrhs/image/upload/v1676596728/products/pexels-angele-j-128420_xotwws.jpg');
+  }
+  
+  .product-img.bell-peppers {
+  background-image: url('https://res.cloudinary.com/dqqdwbrhs/image/upload/v1676596781/products/pexels-anna%C3%ABlle-quionquion-15279910_qqyhqy.jpg');
+  }
+  
+  .product-img.potatoes {
+  background-image: url('https://res.cloudinary.com/dqqdwbrhs/image/upload/v1676596833/products/pexels-pixabay-144248_ow9qus.jpg');
+  }
+  
+  /* Contact section styles */
+  
+  .contact {
+  background-color: #f8f8f8;
+  padding: 5rem 1rem;
+  text-align: center;
+  }
+  
+  .contact h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  }
+  
+  .contact p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  }
+  
+  .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  text-align: left;
+  }
+  
+  label {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  }
+  
+  input,
+  textarea {
+  border: 1px solid #333333;
+  border-radius: 0.25rem;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  }
+  
+  textarea {
+  height: 10rem;
+  }
+  
+  button[type="submit"] {
+  background-color: #2ecc71;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+  background-color: #27ae60;
+  }
+  
+  /* Footer styles */
+  
+  footer {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  }
+  
+  footer p {
+  font-size: 1rem;
+  }
+  
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="https://res.cloudinary.com/dqqdwbrhs/image/upload/v1676596919/products/pexels-polina-tankilevitch-4109267_y24gj7.jpg" alt="logo">
+        <h1>Fresh Vegetables</h1>
+      </div>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="login">Login</a></li>
+        <li><a href="signup">Signup</a></li>
+        <li><a href="service">Service</a></li>
+        <li><a href="products">Products</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1>Find the Freshest Vegetables</h1>
+      <p>From Our Farms to Your Table</p>
+      <a href="#" class="btn">Shop Now</a>
+    </div>
+  </header>
+  <main>
+    <section class="about">
+      <div class="about-img"></div>
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>We are a family-owned farm that has been growing fresh and healthy vegetables for over 50 years. Our goal is to provide our customers with the best quality produce, while also promoting sustainable and responsible farming practices.</p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+    </section>
+    <section class="products">
+      <h2>Our Fresh Vegetables</h2>
+      <div class="products-grid">
+        <div class="product-item">
+          <div class="product-img tomatoes"></div>
+          <h3>Tomatoes</h3>
+          <p>Fresh, juicy, and ready to eat!</p>
+        </div>
+        <div class="product-item">
+          <div class="product-img carrots"></div>
+          <h3>Carrots</h3>
+          <p>Sweet and nutritious, perfect for snacking or cooking.</p>
+        </div>
+        <div class="product-item">
+          <div class="product-img cucumbers"></div>
+          <h3>Cucumbers</h3>
+          <p>Crunchy and refreshing, a great addition to any salad or sandwich.</p>
+        </div>
+        <div class="product-item">
+          <div class="product-img bell-peppers"></div>
+          <h3>Bell Peppers</h3>
+          <p>Colorful and versatile, use them in stir-fries, salads, or as a snack.</p>
+        </div>
+        <div class="product-item">
+          <div class="product-img potatoes"></div>
+          <h3>Potatoes</h3>
+          <p>From mashed to baked to fried, potatoes are a staple in many dishes.</p>
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <h2>Contact Us</h2>
+      <p>Feel free to contact us if you have any questions, comments, or feedback about our products or services.</p>
+      <form>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Fresh Vegetables, Inc.</p>
+    </footer>
+  </body>
+  </html>

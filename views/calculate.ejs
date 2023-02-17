@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <style>
+        @import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css');
+        body {
+            background: url('https://res.cloudinary.com/dqqdwbrhs/image/upload/v1676598275/products/pexels-polina-tankilevitch-4109270_kna2kg.jpg') center center fixed;
+            background-size: cover;
+            color: #fff;
+          }
+          
+          .container {
+            padding-top: 50px;
+          }
+          
+          h1 {
+            font-size: 50px;
+            color: greenyellow;
+            margin-bottom: 30px;
+          }
+          
+          p {
+            color:black;
+            font-size: 24px;
+          }
+          
+          .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+          }
+          
+          .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+          }
+          
+          .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+          }
+          
+          .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+          }
+          
+          .col-sm-6 {
+            margin-top: 50px;
+          }
+          
+          .col-sm-6:first-child {
+            margin-top: 80px;
+          }
+          
+          @media (max-width: 767px) {
+            h1 {
+              font-size: 40px;
+            }
+          
+            p {
+              font-size: 20px;
+            }
+          
+            .btn {
+              font-size: 16px;
+            }
+          
+            .col-sm-6 {
+              margin-top: 30px;
+            }
+          
+            .col-sm-6:first-child {
+              margin-top: 50px;
+            }
+          }
+          
+    </style>
+
+    <title>Calorie Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome <%= username %>!</h1>
+      <p>Weight: <%= weight %> lbs</p>
+      <p>Height: <%= height %> in</p>
+      <p>Gender: <%= gender %></p>
+      <p>Your daily calorie intake should be: <%= calorieIntake %> calories</p>
+      <div class="row">
+        <div class="col-sm-6">
+          <form action="/products" method="GET">
+            <button class="btn btn-primary">Nice! Lets go to buy same health snacks</button>
+          </form>
+        </div>
+        <div class="col-sm-6">
+          <form action="/service" method="GET">
+            <button class="btn btn-danger">No, Calculate Again</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Add Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-YjvH8WtoL1tQTPnYkxKCBH8zEJNJgk+ayPC+k0D9v0JCH/XW+BCGt+h0ejtOJ2G/mnpRwzrDDkL+Og9EJvdKpA==" crossorigin="anonymous" defer></script>
+  </body>
+</html>
+
+

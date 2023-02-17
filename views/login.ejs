@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Vegetable Kingdom</title>
+    <style>
+      /* Import Bootstrap CSS */
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css');
+
+/* Add custom styles */
+body {
+  background-color: #f5f5f5;
+}
+
+.container {
+  margin-top: 5rem;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid #999999;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  border-color: #5cb85c;
+  box-shadow: none;
+}
+
+.btn {
+  background-color: #5cb85c;
+  border: none;
+  border-radius: 0;
+}
+
+.btn:hover {
+  background-color: #449d44;
+}
+
+.alert {
+  border-radius: 0;
+}
+
+.alert-danger {
+  background-color: #f2dede;
+  color: #a94442;
+  border-color: #ebccd1;
+}
+
+.text-center {
+  margin-bottom: 2rem;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center my-5">Welcome back to Vegetable Kingdom</h1>
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <% if (loginAttempts >= 3) { %>
+          <div class="alert alert-danger" role="alert">
+            Too many failed attempts. Please try again later.
+          </div>
+          <% } else { %>
+          <form method="POST" action="/login/login">
+            <% if (typeof error !== 'undefined') { %>
+            <div class="alert alert-danger"><%= error %></div>
+            <% } %>
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                name="username"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-success w-100">
+              Log in
+            </button>
+          </form>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
