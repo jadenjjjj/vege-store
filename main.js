@@ -42,7 +42,7 @@ app.use(express.json());
 app.use(
     session({
         secret: 'my key',
-        saveUninitialized: true,
+        saveUninitialized: false,
         resave: false
     })
 );
@@ -95,5 +95,5 @@ app.use('/checkout', require('./routes/checkout'));
 
 
 app.listen(PORT, () => {
-  console.log('Hello world listening on port', PORT);
+    console.log(`Server started at http://localhost:${PORT}`);
 });
