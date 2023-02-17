@@ -95,5 +95,5 @@ app.use('/checkout', require('./routes/checkout'));
 
 
 app.listen(PORT, () => {
-    console.log(`Server started at http://localhost:${PORT}`);
+  console.log('Hello world listening on port', PORT);
 });
