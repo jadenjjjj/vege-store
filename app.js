@@ -1,8 +1,8 @@
 //const dotenv = require('dotenv');
 const express = require('express');
 const mongoose = require('mongoose');
-const session = require('express-session');
-const cookieSession = require('cookie-session');
+//const session = require('express-session');
+const session = require('cookie-session');
 const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
 
